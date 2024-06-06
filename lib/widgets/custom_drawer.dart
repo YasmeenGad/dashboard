@@ -14,7 +14,10 @@ class CustomDrawer extends StatelessWidget {
           UserInfoListTile(
               title: "Lekan Okeowo",
               subtitle: "demo@gmail.com",
-              image: Assets.imagesAvatar3)
+              image: Assets.imagesAvatar3),
+              SizedBox(
+                height:8,
+              )
         ],
       ),
     );
