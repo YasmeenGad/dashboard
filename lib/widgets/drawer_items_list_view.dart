@@ -19,6 +19,7 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
     DrawerItemModel(title: "Wallet Account", image: Assets.imagesWalletAccount),
     DrawerItemModel(title: "My Investments", image: Assets.imagesMyInvestments),
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -26,19 +27,22 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            if (activeIndex != index) {
-              setState(() {
-                activeIndex = index;
-              });
-            }
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: DrawerItem(
-              drawerItemModel: items[index],
-              isActive: activeIndex == index,
+        return MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () {
+              if (activeIndex != index) {
+                setState(() {
+                  activeIndex = index;
+                });
+              }
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: DrawerItem(
+                drawerItemModel: items[index],
+                isActive: activeIndex == index,
+              ),
             ),
           ),
         );
