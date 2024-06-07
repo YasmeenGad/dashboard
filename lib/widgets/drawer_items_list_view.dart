@@ -22,27 +22,22 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemCount: items.length,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        return MouseRegion(
-          cursor: SystemMouseCursors.click,
-          child: GestureDetector(
-            onTap: () {
-              if (activeIndex != index) {
-                setState(() {
-                  activeIndex = index;
-                });
-              }
-            },
-            child: Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: DrawerItem(
-                drawerItemModel: items[index],
-                isActive: activeIndex == index,
-              ),
+        return GestureDetector(
+          onTap: () {
+            if (activeIndex != index) {
+              setState(() {
+                activeIndex = index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: DrawerItem(
+              drawerItemModel: items[index],
+              isActive: activeIndex == index,
             ),
           ),
         );
