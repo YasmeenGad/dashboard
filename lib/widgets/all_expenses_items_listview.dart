@@ -3,9 +3,16 @@ import 'package:dashboard/utils/app_images.dart';
 import 'package:dashboard/widgets/all_expenses_item.dart';
 import 'package:flutter/material.dart';
 
-class AllExpensesItemsListview extends StatelessWidget {
+class AllExpensesItemsListview extends StatefulWidget {
   const AllExpensesItemsListview({super.key});
-  static const items = <AllExpensesItemModel>[
+
+  @override
+  State<AllExpensesItemsListview> createState() =>
+      _AllExpensesItemsListviewState();
+}
+
+class _AllExpensesItemsListviewState extends State<AllExpensesItemsListview> {
+  final items = <AllExpensesItemModel>[
     AllExpensesItemModel(
         image: Assets.imagesBalance,
         title: 'Balance',
@@ -22,7 +29,7 @@ class AllExpensesItemsListview extends StatelessWidget {
         date: 'April 2022',
         price: r'$20,129'),
   ];
-
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,11 +39,38 @@ class AllExpensesItemsListview extends StatelessWidget {
         return index == 1
             ? Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
-                  child: AllExpensesItem(itemModel: item),
+                  padding: EdgeInsets.symmetric(horizontal: 7),
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = index;
+                        });
+                      },
+                      child: AllExpensesItem(
+                        itemModel: item,
+                        isSelected: selectedIndex == index,
+                      ),
+                    ),
+                  ),
                 ),
               )
-            : Expanded(child: AllExpensesItem(itemModel: item));
+            : Expanded(
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index;
+                    });
+                  },
+                  child: AllExpensesItem(
+                    itemModel: item,
+                    isSelected: selectedIndex == index,
+                  ),
+                                ),
+                ));
       }).toList(),
     );
 
