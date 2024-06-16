@@ -18,7 +18,15 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           AllExpensesHeader(),
-          AllExpensesItem(itemModel: AllExpensesItemModel(image: Assets.imagesIncome, title: 'Income', date: 'April 2022',price: r'$20,129' ))
+          const SizedBox(
+            height: 16,
+          ),
+          AllExpensesItem(
+              itemModel: AllExpensesItemModel(
+                  image: Assets.imagesIncome,
+                  title: 'Income',
+                  date: 'April 2022',
+                  price: r'$20,129'))
         ],
       ),
     );
