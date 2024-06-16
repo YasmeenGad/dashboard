@@ -22,9 +22,13 @@ class RangeOptions extends StatelessWidget {
             width: 18,
           ),
           Transform.rotate(
-              angle: 4.71239,
-              child: Icon(Icons.arrow_back_ios_rounded,
-                  size: 19, color: Color(0xFF064061)))
+            angle: 4.71239,
+            child: Icon(
+              Icons.arrow_back_ios_rounded,
+              size: 19,
+              color: Color(0xFF064061),
+            ),
+          ),
         ],
       ),
     );

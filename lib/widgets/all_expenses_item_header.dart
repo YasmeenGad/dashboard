@@ -16,7 +16,16 @@ class AllExpensesItemHeader extends StatelessWidget {
             color: Color(0xFFFAFAFA),
             shape: OvalBorder(),
           ),
-          child: SvgPicture.asset(image),
+          child: Center(child: SvgPicture.asset(image)),
+        ),
+       const Expanded(child: SizedBox()),
+        Transform.rotate(
+          angle: 4.71239 * 2,
+          child: Icon(
+            Icons.arrow_back_ios_rounded,
+            size: 19,
+            color: Color(0xFF064061),
+          ),
         ),
       ],
     );
