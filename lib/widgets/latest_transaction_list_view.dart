@@ -26,8 +26,10 @@ class LatestTransactionListView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return UserInfoListTile(
-          userInfoModel: items[index],
+        return IntrinsicWidth(
+          child: UserInfoListTile(
+            userInfoModel: items[index],
+          ),
         );
       },
     );
