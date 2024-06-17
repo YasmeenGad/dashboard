@@ -37,9 +37,24 @@ class QuickInvoiceForm extends StatelessWidget {
                 child: const TitleTextField(title: "Item mount", hint: "USD")),
           ],
         ),
+        const SizedBox(
+          height: 24,
+        ),
         Row(
           children: [
-            Expanded(child: const CustomButton()),
+            Expanded(
+                child: const CustomButton(
+              text: 'Add more details',
+              backgroundColor: Colors.transparent,
+              textColor: Color(0xFF4EB7F2),
+            )),
+            const SizedBox(
+              width: 24,
+            ),
+            Expanded(
+                child: const CustomButton(
+              text: 'Add more details',
+            )),
           ],
         ),
       ],

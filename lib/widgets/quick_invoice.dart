@@ -1,9 +1,7 @@
 import 'package:dashboard/widgets/custom_background_container.dart';
-import 'package:dashboard/widgets/custom_text_field.dart';
 import 'package:dashboard/widgets/latest_transaction.dart';
 import 'package:dashboard/widgets/quick_invoice_form.dart';
 import 'package:dashboard/widgets/quick_invoice_header.dart';
-import 'package:dashboard/widgets/title_text_field.dart';
 import 'package:flutter/material.dart';
 
 class QuickInvoice extends StatelessWidget {
