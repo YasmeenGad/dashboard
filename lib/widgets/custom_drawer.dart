@@ -18,7 +18,7 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: Align(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               child: Padding(
                 padding: const EdgeInsets.only(top: 20, left: 15, bottom: 15),
                 child: Stack(
