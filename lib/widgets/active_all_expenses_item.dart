@@ -27,29 +27,23 @@ class ActiveAllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          FittedBox(
-            child: Text(
-              "${itemModel.title}",
-              style: AppStyles.styleMedium16.copyWith(color: Colors.white),
-            ),
+          Text(
+            "${itemModel.title}",
+            style: AppStyles.styleMedium16.copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 8,
           ),
-          FittedBox(
-            child: Text(
-              "${itemModel.date}",
-              style: AppStyles.styleRegular14.copyWith(color: Color(0xffFAFAFA)),
-            ),
+          Text(
+            "${itemModel.date}",
+            style: AppStyles.styleRegular14.copyWith(color: Color(0xffFAFAFA)),
           ),
           const SizedBox(
             height: 16,
           ),
-          FittedBox(
-            child: Text(
-              "${itemModel.price}",
-              style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
-            ),
+          Text(
+            "${itemModel.price}",
+            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
           ),
         ],
       ),

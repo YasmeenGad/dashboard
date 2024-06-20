@@ -1,4 +1,5 @@
 import 'package:dashboard/utils/app_styles.dart';
+import 'package:dashboard/widgets/transaction_history_header.dart';
 import 'package:flutter/material.dart';
 
 class TransactionHistory extends StatelessWidget {
@@ -8,14 +9,11 @@ class TransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Transaction History', style: AppStyles.styleSemiBold20,),
-            Text('See all', style: AppStyles.styleMedium16.copyWith(color: Color(0xFF4EB7F2)),),
-          ],
-        )
+        TransactionHistoryHeader(),
+       const SizedBox(height: 20,),
+        Text('13 April 2022',style: AppStyles.styleMedium20,)
       ],
     );
   }
 }
+
