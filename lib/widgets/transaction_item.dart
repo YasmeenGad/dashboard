@@ -24,7 +24,7 @@ class TransactionItem extends StatelessWidget {
           ),
         ),
         trailing: Text(
-          '${transactionModel.title}',
+          '${transactionModel.amount}',
           style: AppStyles.styleSemiBold20.copyWith(
               color: transactionModel.withDraw
                   ? Color(0xFFF3735E)

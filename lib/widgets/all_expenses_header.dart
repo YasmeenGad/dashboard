@@ -4,17 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
+  const AllExpensesHeader({super.key,  this.text="All Expenses"});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "All Expenses",
+          text,
           style: AppStyles.styleSemiBold20,
         ),
-        const Expanded(child: SizedBox()),
         const RangeOptions(),
       ],
     );
