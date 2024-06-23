@@ -16,7 +16,10 @@ class DashBoardDeskTopLayout extends StatelessWidget {
         const SizedBox(
           width: 32,
         ),
-        const Expanded(flex: 2, child: AllExpensesAndQuickInvoiceSection()),
+        const Expanded(flex: 2, child: Padding(
+          padding: EdgeInsets.only(top:40),
+          child: AllExpensesAndQuickInvoiceSection(),
+        )),
         const SizedBox(width: 24,),
         const Expanded(
           child: Column(
