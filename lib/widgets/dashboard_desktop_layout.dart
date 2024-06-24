@@ -17,7 +17,7 @@ class DashBoardDeskTopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 3,
+          flex: 5,
           child: CustomScrollView(
             slivers: [
               SliverFillRemaining(
@@ -25,7 +25,7 @@ class DashBoardDeskTopLayout extends StatelessWidget {
                 child: Row(
                   children: [
                     const Expanded(
-                        flex: 2,
+                        flex: 3,
                         child: Padding(
                           padding: EdgeInsets.only(top: 40),
                           child: AllExpensesAndQuickInvoiceSection(),
@@ -34,6 +34,7 @@ class DashBoardDeskTopLayout extends StatelessWidget {
                       width: 24,
                     ),
                     const Expanded(
+                      flex: 2,
                       child: Column(
                         children: [
                           const SizedBox(
