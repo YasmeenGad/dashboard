@@ -13,9 +13,13 @@ class TransactionItem extends StatelessWidget {
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
-        title: Text(
-          '${transactionModel.title}',
-          style: AppStyles.styleSemiBold16(context),
+        title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+          child: Text(
+            '${transactionModel.title}',
+            style: AppStyles.styleSemiBold16(context),
+          ),
         ),
         subtitle: Text(
           '${transactionModel.date}',

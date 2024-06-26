@@ -39,7 +39,7 @@ class _AllExpensesItemsListviewState extends State<AllExpensesItemsListview> {
         return index == 1
             ? Expanded(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 7),
+                  padding: EdgeInsets.symmetric(horizontal: 2),
                   child: MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(

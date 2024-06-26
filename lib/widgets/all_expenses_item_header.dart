@@ -12,6 +12,7 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           height: 60,
@@ -27,7 +28,7 @@ class AllExpensesItemHeader extends StatelessWidget {
                 imageColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
           )),
         ),
-        const Expanded( child: SizedBox()),
+        
         Transform.rotate(
           angle: 4.71239 * 2,
           child: Icon(
