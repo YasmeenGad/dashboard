@@ -17,11 +17,11 @@ class ItemDetails extends StatelessWidget {
       ),
       title: Text(
         "${chartDetailsModel.title}",
-        style: AppStyles.styleRegular16,
+        style: AppStyles.styleRegular16(context),
       ),
       trailing: Text(
         '${chartDetailsModel.value}',
-        style: AppStyles.styleMedium16,
+        style: AppStyles.styleMedium16(context),
       ),
     );
   }

@@ -4,13 +4,12 @@ import 'package:dashboard/widgets/all_expenses_item_header.dart';
 import 'package:flutter/material.dart';
 
 class ActiveAllExpensesItem extends StatelessWidget {
-  const ActiveAllExpensesItem({ required this.itemModel});
-   final AllExpensesItemModel itemModel;
-   
+  const ActiveAllExpensesItem({required this.itemModel});
+  final AllExpensesItemModel itemModel;
 
   @override
   Widget build(BuildContext context) {
-     return Container(
+    return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       decoration: BoxDecoration(
           color: Color(0xFF4DB7F2),
@@ -29,21 +28,24 @@ class ActiveAllExpensesItem extends StatelessWidget {
           ),
           Text(
             "${itemModel.title}",
-            style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+            style:
+                AppStyles.styleMedium16(context).copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             "${itemModel.date}",
-            style: AppStyles.styleRegular14.copyWith(color: Color(0xffFAFAFA)),
+            style: AppStyles.styleRegular14(context)
+                .copyWith(color: Color(0xffFAFAFA)),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             "${itemModel.price}",
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold24(context)
+                .copyWith(color: Colors.white),
           ),
         ],
       ),
