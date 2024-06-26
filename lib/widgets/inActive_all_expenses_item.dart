@@ -28,6 +28,8 @@ class InactiveAllExpensesItem extends StatelessWidget {
             height: 34,
           ),
           FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
             child: Text(
               "${itemModel.title}",
               style: AppStyles.styleMedium16(context),
@@ -37,6 +39,8 @@ class InactiveAllExpensesItem extends StatelessWidget {
             height: 8,
           ),
           FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
             child: Text(
               "${itemModel.date}",
               style: AppStyles.styleRegular14(context),
@@ -46,6 +50,8 @@ class InactiveAllExpensesItem extends StatelessWidget {
             height: 16,
           ),
           FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
             child: Text(
               "${itemModel.price}",
               style: AppStyles.styleSemiBold24(context),

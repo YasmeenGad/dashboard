@@ -32,12 +32,8 @@ class _AllExpensesItemsListviewState extends State<AllExpensesItemsListview> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return index == 1
-            ? Expanded(
+    return Row(children: [
+       Expanded(
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 2),
                   child: MouseRegion(
@@ -45,48 +41,58 @@ class _AllExpensesItemsListviewState extends State<AllExpensesItemsListview> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
-                          selectedIndex = index;
+                          selectedIndex = 0;
                         });
                       },
                       child: AllExpensesItem(
-                        itemModel: item,
-                        isSelected: selectedIndex == index,
+                        itemModel: items[0],
+                        isSelected: selectedIndex == 0,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8,),
+               Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 2),
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = 1;
+                        });
+                      },
+                      child: AllExpensesItem(
+                        itemModel: items[1],
+                        isSelected: selectedIndex == 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8,),
+               Expanded(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 2),
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          selectedIndex = 2;
+                        });
+                      },
+                      child: AllExpensesItem(
+                        itemModel: items[2],
+                        isSelected: selectedIndex == 2,
                       ),
                     ),
                   ),
                 ),
               )
-            : Expanded(
-                child: MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedIndex = index;
-                    });
-                  },
-                  child: AllExpensesItem(
-                    itemModel: item,
-                    isSelected: selectedIndex == index,
-                  ),
-                                ),
-                ));
-      }).toList(),
-    );
-
-    // return Row(
-    //   children: items
-    //       .map(
-    //         (e) => Expanded(child: AllExpensesItem(itemModel: e)),
-    //       )
-    //       .toList(),
-    // );
-    // return ListView.builder(
-    //   scrollDirection: Axis.horizontal,
-    //   itemCount: items.length,
-    //   itemBuilder: (context, index) {
-    //     return AllExpensesItem(itemModel: items[index]);
-    //   },
-    // );
+    ],);
+    
   }
 }
