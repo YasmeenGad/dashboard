@@ -12,21 +12,23 @@ class AllExpensesItemHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          height: 60,
-          width: 60,
-          decoration: ShapeDecoration(
-            color: imageBackground ?? Color(0xFFFAFAFA),
-            shape: OvalBorder(),
+        Flexible(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: ShapeDecoration(
+                color: imageBackground ?? Color(0xFFFAFAFA),
+                shape: OvalBorder(),
+              ),
+              child: Center(
+                  child: SvgPicture.asset(
+                image,
+                colorFilter: ColorFilter.mode(
+                    imageColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
+              )),
+            ),
           ),
-          child: Center(
-              child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-                imageColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
-          )),
         ),
         
         Transform.rotate(
