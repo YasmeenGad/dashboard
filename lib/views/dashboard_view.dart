@@ -29,7 +29,7 @@ class _DashBoardViewState extends State<DashBoardView> {
                 icon: Icon(Icons.menu),
               ),
               elevation: 0,
-              backgroundColor: Color(0xFF4EB7F2),
+              backgroundColor: Color(0xFFFAFAFA),
             )
           : null,
       drawer: MediaQuery.sizeOf(context).width < SizeConfig.tablet ? CustomDrawer() : null,
